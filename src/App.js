@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Tee from './tee';
+import AddTee from './addTee'
 
 
 class App extends Component {
@@ -17,7 +18,7 @@ class App extends Component {
           {/* <Tee name="June" age="20" belt="white"/>
           <Tee name="junee" age="18" belt="green"/> */}
           <Tee teelist={this.state.teelist}/>
-          
+          <AddTee/>
       </div>
     );
   }
