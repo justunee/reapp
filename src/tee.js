@@ -33,7 +33,7 @@
 
 import React from "react";
 
-const tee = ({ teelist, deleteLists }) => {
+const tee = ({ teelist, PassdeleteList }) => {
   const newteelist = teelist.map(cyclist => {
     if (cyclist.age > 23) {
       return (
@@ -44,7 +44,7 @@ const tee = ({ teelist, deleteLists }) => {
 
           <button
             onClick={() => {
-              deleteLists(cyclist.id);
+              PassdeleteList(cyclist.id);
             }}
           >
             Delete
