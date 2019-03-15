@@ -14,8 +14,8 @@ class AddTee extends Component {
 
   handSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
-  };
+    this.props.fromAddToList(this.state);
+  }
 
   render() {
     return (

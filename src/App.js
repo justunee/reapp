@@ -11,6 +11,19 @@ class App extends Component {
         {name:"just",age:"40",belt:'green',id:3},
     ]
   }
+
+  addTolist = (listFromAdd) => 
+  {
+    listFromAdd.id = Math.random();
+    let TempArray = [...this.state.teelist, listFromAdd];
+    
+    this.setState({
+      teelist: TempArray
+    })
+
+    console.log(listFromAdd);
+
+  }
   render() {
     return (
       <div className="App">     
@@ -18,7 +31,7 @@ class App extends Component {
           {/* <Tee name="June" age="20" belt="white"/>
           <Tee name="junee" age="18" belt="green"/> */}
           <Tee teelist={this.state.teelist}/>
-          <AddTee/>
+          <AddTee fromAddToList={this.addTolist}/>
       </div>
     );
   }
