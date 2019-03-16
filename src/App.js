@@ -33,13 +33,11 @@ class App extends Component {
     console.log(id);
   };
 
-  componentDidMount(){
-console.log('componet mount');
+  componentDidMount() {
+    console.log("componet mount");
   }
-  componentDidUpdate(prevProps,prevState){
+  componentDidUpdate(prevProps, prevState) {
     console.log("update");
-    console.log(prevProps,prevState);
-
   }
 
   render() {
