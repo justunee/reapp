@@ -25,6 +25,15 @@ class App extends Component {
   }
 
   deleteList = (id) =>{
+      let a = this.state.teelist.filter(b =>{
+          return b.id !== id
+
+      });
+      this.setState({
+        teelist: a
+
+      })
+
     console.log(id)
 
   }
