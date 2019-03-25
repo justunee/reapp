@@ -20,7 +20,7 @@ class Addtod extends Component{
             return(<div>
                 <form onSubmit={this.handleSubmit}>
                     <label>Add New TODO:</label>
-                    <input type ="text" onChange={this.handleChange} value={this.state.content/>
+                    <input type ="text" onChange={this.handleChange} value={this.state.content}/>
                 </form>
             </div>
             )
