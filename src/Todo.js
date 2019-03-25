@@ -1,14 +1,15 @@
 import React from 'react'
 
-const Todos = ({todos}) =>{
+const Todos = ({todospass,DeleteTodoPassProps}) =>{
 
-    const todoList = todos.length ? (
+    const todoList = todospass.length ? (
 
-        todos.map(todo =>{
+        todospass.map(todo =>{
             return(
                 <div className="collection item" key={todo.id}>
-                    <span>
+                    <span onClick = {() => {DeleteTodoPassProps(todo.id)}}>
                         {todo.content}
+                        
                     </span>
                 </div>
             )
