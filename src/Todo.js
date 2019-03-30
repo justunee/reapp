@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'react-bootstrap';
 
 const Todos = ({todospass,DeleteTodoPassProps}) =>{
 
@@ -7,10 +8,11 @@ const Todos = ({todospass,DeleteTodoPassProps}) =>{
         todospass.map(todo =>{
             return(
                 <div className="collection item" key={todo.id}>
-                    <span onClick = {() => {DeleteTodoPassProps(todo.id)}}>
+                    <span>
                         {todo.content}
-                        
                     </span>
+                <Button style={{float: "right"}} onClick = {() => {DeleteTodoPassProps(todo.id)}}> Delete </Button>
+                
                 </div>
             )
 
